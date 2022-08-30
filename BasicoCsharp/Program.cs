@@ -58,8 +58,41 @@ namespace BasicoCsharp
                 Console.WriteLine(nombre);
             }
 
+
+
+            //Clases
+            Persona persona = new Persona();
+
+            persona.Nombres = "Juan José";
+            persona.Apellidos = "Torrico López";
+            persona.Edad = 56;
+
+            Persona persona1 = new Persona
+            {
+                Nombres = "Yury Yovanna",
+                Apellidos = "Márquez Montes",
+                Edad = 54
+            };
+
+
+            persona.AsignarNombresCompletos();
+            Console.WriteLine(persona.NombresCompletos);
+
+                               
+            Console.WriteLine(persona.Nombres);
+            Console.WriteLine(persona.Apellidos);
+            Console.WriteLine(persona.Edad);
+            Console.WriteLine(persona.GetNombresCompletos());
+
+
+            Console.WriteLine(persona1.Nombres);
+            Console.WriteLine(persona1.Apellidos);
+            //Console.WriteLine(persona1.GetNombresCompletos());
+
+
             Console.Read();
 
         }
     }
 }
+
