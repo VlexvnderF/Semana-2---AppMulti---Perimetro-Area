@@ -4,94 +4,56 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BasicoCsharp
+namespace Prueba
 {
-    class Program
+    internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hola mundo");
-            //Declaració variablaes
+            int valor1 = 0;
+            int valor2 = 0;
+            int valor3 = 0;
+            int valor4 = 0;
+            int valor5 = 0;
+            int valor6 = 0;
+            int valor7 = 0;
+            int valor8 = 0;
 
-            int edad = 34;            
-            string nombre = "hugo";
-            decimal sueldo = 10000;
-            bool esNuevo = true;
+            Console.WriteLine("Ingrese x1:");
+            valor1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Ingrese y2:");
+            valor2 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Ingrese x2:");
+            valor3 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Ingrese y2:");
+            valor4 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Ingrese x3:");
+            valor5 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Ingrese y3:");
+            valor6 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Ingrese x4:");
+            valor7 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Ingrese y4:");
+            valor8 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Datos correctamente ingresados");
 
-            int edad2 ;
-            string nombre2 ;
-            decimal sueldo2;
-            bool esNuevo2;
-
-            edad2 = 34;
-            nombre2 = "hugo2";
-            sueldo2 = 5000;
-
-
-            //Sentencias
-            if (edad>18)
+            Rectangulo rectangulo = new Rectangulo
             {
-                Console.WriteLine("Es Mayor Edad");
-            }
-            if (sueldo>2000)
-            {
-                Console.WriteLine("Millonario");
-            }
-            else
-            {
-                Console.WriteLine("Pobre");
-            }
-            switch (edad2)
-            {
-                case 20:
-                    Console.WriteLine("Es Joven");
-                    break;
-                case 30:
-                    Console.WriteLine("Es Adulto");
-                    break;
-                default:
-                    break;
-            }
-
-            for (int i = 0; i < 20; i++)
-            {
-                Console.WriteLine(nombre);
-            }
-
-
-
-            //Clases
-            Persona persona = new Persona();
-
-            persona.Nombres = "Juan José";
-            persona.Apellidos = "Torrico López";
-            persona.Edad = 56;
-
-            Persona persona1 = new Persona
-            {
-                Nombres = "Yury Yovanna",
-                Apellidos = "Márquez Montes",
-                Edad = 54
+                x1 = valor1,
+                y1 = valor2,
+                x2 = valor3,
+                y2 = valor4,
+                x3 = valor5,
+                y3 = valor6,
+                x4 = valor7,
+                y4 = valor8,
             };
-
-
-            persona.AsignarNombresCompletos();
-            Console.WriteLine(persona.NombresCompletos);
-
-                               
-            Console.WriteLine(persona.Nombres);
-            Console.WriteLine(persona.Apellidos);
-            Console.WriteLine(persona.Edad);
-            Console.WriteLine(persona.GetNombresCompletos());
-
-
-            Console.WriteLine(persona1.Nombres);
-            Console.WriteLine(persona1.Apellidos);
-            //Console.WriteLine(persona1.GetNombresCompletos());
-
+            Console.WriteLine("El valor del área es: ");
+            Console.WriteLine(rectangulo.s());
+            Console.WriteLine("El valor del perimétro es: ");
+            Console.WriteLine(rectangulo.p());
 
             Console.Read();
-
         }
     }
 }
